@@ -1,11 +1,9 @@
 html, body {
-
     box-sizing: border-box;
     padding-top: 0;
     margin-top: 0;
     line-height: 1.4;
-    width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     scroll-behavior: smooth;
     font-size: 14px;
 }
@@ -13,5 +11,9 @@ html {
 
 }
 body {
+    box-sizing: border-box;
     font-family: "amazon", sans-serif;
+    width: 100vw;
+    height:100vh;
+    overflow: hidden;
 }

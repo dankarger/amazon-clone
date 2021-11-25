@@ -10,7 +10,6 @@
     --button-orange:#FA8900;
     --brown:#CC6600;
     --cart-number:#F08804;
-
 }
 
 ul {
@@ -20,4 +19,8 @@ ul {
 a{
     text-decoration: none;
     color:inherit;
+}
+
+p {
+    margin: 0;
 }
