@@ -1,7 +1,7 @@
 
 :root {
     --background-navbar-top:#141921;
-    --background-navbar-botoom:#23303E;
+    --background-navbar-bottom:#23303E;
     --orange:#F3A846;
     --white:#ffffff;
     --white2:#FAFAFA;
@@ -11,4 +11,8 @@
     --brown:#CC6600;
     --cart-number:#F08804;
 
+}
+
+ul {
+    list-style: none;
 }
