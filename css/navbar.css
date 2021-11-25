@@ -15,42 +15,93 @@
     height:60%;
     width:100%;
     display:flex;
-    justify-content: center;
+
     align-items: center;
 }
-
-#nav .nav-top .nav-top-ul {
+#nav .nav-left {
+    max-width:20%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:2rem
+}
+#nav .nav-left-container {
     width:100%;
     height:100%;
     display:flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
 }
-#nav .nav-bottom {
-    background: var(--background-navbar-bottom);
-    height:60%;
-    width:100%;
-}
-
-
-
-#nav .nav-top-ul .nav-item-top {
-    width:100%;
-    height:100%;
-    flex: 0 0 20%;
-
-
-}
-
-#nav .search-bar-nav {
-    flex: 0 0 80%;
-    /*min-width:40rem;*/
-
+#nav .nav-middle {
+    width:60%;
     height:100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+#nav .search-bar-nav {
+    /*flex: 0 0 90%;*/
+    width:100%;
+    height:70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: var(--white);
-    color:var(--black)
+    color:var(--black);
+    border-radius:5px;
+
 
 }
+#nav #search-bar-input {
+    width:100%;
+    height:100%;
+    align-self: flex-start;
+
+
+}
+#nav .nav-right {
+    max-width:20%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/*#nav .nav-top .nav-top-ul {*/
+/*    width:100%;*/
+/*    height:100%;*/
+/*    display:flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    flex-direction: row;*/
+/*}*/
+#nav .nav-bottom {
+    background: var(--background-navbar-bottom);
+    height:40%;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav .Hamburger-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nav .nav-bottom-middle {
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+#nav .nav-item-top {
+    width:100%;
+    height:100%;
+    padding:  1rem 0.5rem;
+    margin:  2rem 0.5rem;
+}
+
