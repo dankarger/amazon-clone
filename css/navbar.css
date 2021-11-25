@@ -13,7 +13,7 @@
 }
 #nav .nav-top {
     background: var(--background-navbar-top);
-    height:60%;
+    height:60px;
     width:100%;
     display:flex;
     align-items: center;
@@ -29,7 +29,7 @@
     display:flex;
     justify-content: left;
     align-items: center;
-    margin-left:2rem;
+
     white-space: nowrap;
 }
 #nav .nav-left-container {
@@ -55,7 +55,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border:yellow 1px solid;
 }
 #nav .search-bar-nav {
 
@@ -95,10 +94,10 @@
 #nav .nav-right {
     /*flex: 0 0 10%;*/
       width:15%;
-    min-width:280px;
+    min-width:290px;
     height: 100%;
     display:flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     white-space: nowrap;
     margin:0 1rem;
@@ -116,7 +115,8 @@
 
 }
 #nav .nav-bottom-left {
-    margin-left:2rem;
+    /*margin-left:2rem;*/
+    /*margin-left:0;*/
 }
 #nav .Hamburger-div {
     display: flex;
@@ -140,6 +140,7 @@
 }
 
 #nav .nav-item-top, .flag-div {
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,25 +149,32 @@
     /*border:red 1px solid;*/
     width:100%;
     height:50px;
-    border: 1.5px solid transparent;
-    margin:4rem 0;
+    border: 2px solid transparent;
+
     /*padding:  1rem 0.5rem;*/
     /*margin:  2rem 0.5rem;*/
 }
-#nav .flag-div {
-    /*min-width:50px;*/
-    width:50%;
-}
-#nav .nav-item-top:hover ,#nav .flag-div:hover{
-    border: 1.5px var(--white) solid;
-}
 #nav .nav-bottom-item {
+    height:25px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width:100px;
-
+    min-width:20px;
+    padding:0 0.5rem ;
+    border: 2px var(--background-navbar-bottom) solid ;
 }
+#nav .nav-bottom-item:hover {
+    border: 2px var(--white) solid;
+}
+#nav .nav-item-top:hover ,#nav .flag-div:hover {
+    border: 2px var(--white) solid;
+}
+
+#nav .hello-text {
+    padding:1rem;
+}
+
 #nav .deliver-to-div {
     /*min-width: 50px;*/
     width:100%;
@@ -186,6 +194,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding:0 0.2rem  ;
 }
 /* Text*/
 
@@ -213,13 +222,16 @@
 #nav .glass-div {
     width:40px;
     height:100%;
-    background: var(--orange);
+    background:#edaf66;
     display:flex;
     justify-content: center;
     align-items: center;
+    border-radius:0 5px 5px 0;
 
 }
-
+#nav .glass-div:hover {
+    background: var(--orange) ;
+}
 .search-icon {
     background: url('../assets/images/nav-sprite-global-1x-hm-dsk-reorg._CB405937547_.png') no-repeat -10px -290px;
     width: 21px;
@@ -234,6 +246,24 @@
     margin-right:0.5rem;
 }
 
+#nav .cart-container{
+    display:flex;
+    justify-content: center;
+    align-items: end;
+    position:relative;
+}
+
+#nav .number-div {
+    position:absolute;
+    bottom:10px;
+    right:40px;
+}
+#nav .number-div p{
+    color:#F07F16;
+    font-size: 1rem;
+    font-weight: 600;
+
+}
 .cart-icon {
     background: url('../assets/images/nav-sprite-global-1x-hm-dsk-reorg._CB405937547_.png') no-repeat -10px -340px;
     width: 38px;
@@ -245,9 +275,64 @@
     width: 41px;
     height: 28px;
 }
+
+#nav .flag-div {
+    min-width:50px;
+    width:60%;
+    padding:0 1px;
+}
 .flag-icon {
     background: url("../assets/images/rzrQQdi0aRm6Dap.png") no-repeat 0 -130px;
     width: 24px;
     height: 18px;
+
+}
+
+/*Navbar 3*/
+
+#nav-bar3 {
+    background:var(--white2);
+    margin:0;
+    padding: 0;
+    height:100%
+
+}
+#nav-bar3 .nav3-ul {
+    width:100%;
+    height: 100%;
+    display:flex;
+    justify-content: left;
+
+}
+
+#nav-bar3 .nav3-ul .nav3-item ,.nav4-item{
+    white-space: nowrap;
+    padding: 0.3rem 0.8rem;
+    border-bottom: transparent 2px solid;
+}
+#nav-bar3 .nav3-ul .nav3-item a, .nav4-item a{
+    font-size:0.8rem;
+    font-weight: 100;
+}
+
+#nav-bar3 .nav3-ul .nav3-item:hover {
+    border-bottom: var(--orange) 2px solid;
+    color: var(--orange);
+}
+
+/* Navbar 4*/
+
+#nav-bar4 {
+    /*margin-left:5rem*/
+}
+#nav-bar4 .nav4-ul {
+    width:100%;
+    height: 100%;
+    display:flex;
+    justify-content: left;
+
+}
+#nav-bar4 .nav4-ul .nav4-item:hover {
+    text-decoration: underline;
 
 }
