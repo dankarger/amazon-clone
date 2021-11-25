@@ -305,7 +305,7 @@
 
 }
 
-#nav-bar3 .nav3-ul .nav3-item ,.nav4-item{
+#nav-bar3 .nav3-ul .nav3-item {
     white-space: nowrap;
     padding: 0.3rem 0.8rem;
     border-bottom: transparent 2px solid;
@@ -335,4 +335,10 @@
 #nav-bar4 .nav4-ul .nav4-item:hover {
     text-decoration: underline;
 
+}
+
+.nav4-item{
+    white-space: nowrap;
+    padding: 0.3rem 0.8rem;
+    border-bottom: transparent 2px solid;
 }
