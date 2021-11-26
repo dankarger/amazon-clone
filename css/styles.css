@@ -317,11 +317,11 @@ body {
     height: 22rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     flex-direction: row;
 
 }
- .chevron-left-big-icon {
+ .chevron-left-big-icon , .chevron-right-big-icon{
      display: flex;
      justify-content: center;
      align-items: center;
@@ -333,17 +333,17 @@ body {
      border-radius: 6px;
      opacity: 0.8;
  }
-.chevron-left-big-icon:hover {
+.chevron-left-big-icon:hover, .chevron-right-big-icon:hover {
     filter: brightness(94%);
 }
-.chevron-left-big-icon i{
+.chevron-left-big-icon i, .chevron-right-big-icon i{
     color: var(--grey2);
 }
 
 .carousel-card-div {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
