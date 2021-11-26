@@ -69,7 +69,7 @@ function removeCart() {
 const productsDataBase = [
     {
         img: "../assets/images/41lRhUCEBOL._AC_SR160,160_.jpg",
-        text: 'D Z Strad Carbon Fiber Cello Bow with Traditional Frog made from Polished Premium Ebony 4/4 Full Size\n' +
+        text: 'hi D Z Strad Carbon Fiber Cello Bow with Traditional Frog made from Polished Premium Ebony 4/4 Full Size\n' +
             'D Z Strad Carbon Fiber Cello Bow with Traditional Frog made from Polished…\n',
         stars: 'stars',
         rating: '16',
@@ -78,7 +78,7 @@ const productsDataBase = [
     },
     {
         img: "../assets/images/61K1RfassZS._AC_UL160_SR160,160_.jpg",
-        text: 'Aileen 4/4 Full Size Burgundy Wooden Cello Box Stand, Black Premium Velvet Plush Interior Including Bow Holder with Anti-Slip Mat\n' +
+        text: 'hi2 Aileen 4/4 Full Size Burgundy Wooden Cello Box Stand, Black Premium Velvet Plush Interior Including Bow Holder with Anti-Slip Mat\n' +
             'Aileen 4/4 Full Size Burgundy Wooden Cello Box Stand, Black Premium Velvet Plush…\n',
         stars: 'stars',
         rating: '51',
@@ -86,7 +86,7 @@ const productsDataBase = [
         prime: 'prime'
     }, {
         img: "../assets/images/41j7-wCYxnL._AC_SR160,160_.jpg",
-        text: 'Cello Stand Adjustable, Folding Cello Support Stand, A-Frame Folding Cello Holder Compatible for Violin 1/8-4/4 Cellos Guitars Electric Bass Electric Guitar Stand Acoustic, Black\n' +
+        text: 'hi3 Cello Stand Adjustable, Folding Cello Support Stand, A-Frame Folding Cello Holder Compatible for Violin 1/8-4/4 Cellos Guitars Electric Bass Electric Guitar Stand Acoustic, Black\n' +
             'Cello Stand Adjustable, Folding Cello Support Stand, A-Frame Folding Cello Holder C...\n',
         stars: 'stars',
         rating: '10',
@@ -112,11 +112,27 @@ const productsDataBase = [
     },
     {
         img: "../assets/images/51k7rvaYVcL._AC_SR160,160_ (1).jpg",
-        text: 'Touch of Class Ayden Music Stand Windsor Oak One Size\n' +
+        text: 'Hiiiii Touch of Class Ayden Music Stand Windsor Oak One Size\n' +
             'Touch of Class Ayden Music Stand Windsor Oak One Size\n',
         stars: 'stars2',
         rating: '2',
         price: '$169.00',
+        prime: 'prime'
+    },{
+        img: "../assets/images/41lRhUCEBOL._AC_SR160,160_.jpg",
+        text: 'D Z Strad Carbon Fiber Cello Bow with Traditional Frog made from Polished Premium Ebony 4/4 Full Size\n' +
+            'D Z Strad Carbon Fiber Cello Bow with Traditional Frog made from Polished…\n',
+        stars: 'stars',
+        rating: '16',
+        price: '$129.00',
+        prime: 'prime'
+    },{
+        img: "../assets/images/41lRhUCEBOL._AC_SR160,160_.jpg",
+        text: 'Heeeloo w with Traditional Frog made from Polished Premium Ebony 4/4 Full Size\n' +
+            'D Z Strad Carbon Fiber Cello Bow with Traditional Frog made from Polished…\n',
+        stars: 'stars',
+        rating: '16',
+        price: '$129.00',
         prime: 'prime'
     }
 ]
@@ -145,7 +161,7 @@ function injectRowOfCards(cards) {
 
 }
 
-let pageItems = 3
+let pageItems = 5
 let pageNumber = 0;
 let pages = paginator(productsDataBase)
 
@@ -170,21 +186,19 @@ function pageSelector(value) {
 
 function createCarousel(pages,pageNumber) {
      const cards=pages[pageNumber]
+    console.log('createcarousel',cards)
       injectRowOfCards(cards)
 }
 
 
 function paginator(data) {
-    let numberOfPages = data.length / pageItems
+    let numberOfPages = Math.floor(data.length / pageItems)
     let pages = []
-    for (let i = 1; i <= numberOfPages; i++) {
-        let page = productsDataBase.filter((card, index) => {
-            let offset = i * pageItems
-            if(index >= i && index < i + pageItems)return card
-        })
+    for (let i = 0; i <data.length; i+=pageItems) {
+        let page = data.slice(i,i+pageItems)
         pages.push(page)
     }
-    // console.log('pages', pages)
+    console.log('pages', pages)
     return pages
 
 }
