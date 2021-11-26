@@ -1,4 +1,5 @@
 // export let pageItems = 5
+export let pageNumber = 0;
 
 export function paginator(data,pageItems) {
     let numberOfPages = Math.floor(data.length / pageItems)
@@ -7,7 +8,26 @@ export function paginator(data,pageItems) {
         let page = data.slice(i,i+pageItems)
         pages.push(page)
     }
-    console.log('pages2', pages)
     return pages
 
 }
+
+export function pageSelector(value,pages,pageNumber) {
+    if (value === 'up') {
+        if(pageNumber<pages.length-1) {
+            pageNumber++
+            return pageNumber
+        }else{
+            return  pageNumber
+        }
+    }
+    if (value === 'down') {
+        if(pageNumber>0) {
+            pageNumber--
+            return pageNumber
+        }else{
+            return  pageNumber
+        }
+    }
+}
+
