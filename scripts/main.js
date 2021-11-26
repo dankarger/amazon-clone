@@ -39,3 +39,49 @@ function removeCart() {
 
     prevValue>0?cartNumber.innerHTML--:cartNumber.innerHTML = '0';
 }
+
+class Card {
+    constructor(img,text,stars,rating,price,prime) {
+        this.img=` <img class="card-img" src="${img}" alt="img">`
+        this.text = `<h4 class="card-text">${text}</h4>`
+        this.stars =`<div class="${stars}">`
+        this.rating= `<div class="cardl-rating">
+                              <a href="#">${rating} </a>
+                          </div>`
+        this.price = `<div class="card-price-div">
+                       <h3>${price}</h3>
+                       </div>`
+        this.prime=`<div class="${prime}">`
+
+    }
+}
+
+const productsDataBase =
+    {
+        img:"../assets/images/41lRhUCEBOL._AC_SR160,160_.jpg",
+        text:'D Z Strad Carbon Fiber Cello Bow with Traditional Frog made from Polished Premium Ebony 4/4 Full Size\n' +
+            'D Z Strad Carbon Fiber Cello Bow with Traditional Frog made from Polished…\n',
+        stars:'stars',
+        rating:'16',
+        price:'$129.00 ',
+        prime:'prime'
+    }
+
+
+// let newCard = new Card(productsDataBase[0]['img'],productsDataBase[0]['text'],productsDataBase[0]['stars'],productsDataBase[0]['rating'],productsDataBase[0]['price'],productsDataBase[0]['prime'])
+// console.log(newCard)
+let newCard = new Card(productsDataBase['img'],productsDataBase['text'],productsDataBase['stars'],productsDataBase['rating'],productsDataBase['price'],productsDataBase['prime'])
+
+let carousel = document.querySelector('.carousel-card-div')
+
+function injectCard(card) {
+   return carousel.innerHTML = `<div class="card"> ${card.img} \n ${card.text}\n ${card.stars}\n ${card.rating}\n ${card.price}\n ${card.prime} </div>`
+}
+
+injectCard(newCard)
+
+function injectRowOfCards(cards) {
+
+
+
+}

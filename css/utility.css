@@ -7,7 +7,10 @@
     --white2:#FAFAFA;
     --black:#0F1111;
     --grey:#333332;
+    --grey2:#656769;
     --blue-text:#007185;
+    --red-text:#c93f2c;
+    --red-text2:#cc6600;
     --button-yellow:#F7CA00;
     --button-orange:#FA8900;
     --brown:#CC6600;
@@ -87,4 +90,31 @@ button:hover {
     background: url('../assets/images/McBZv0ZvnbehkIx.png') no-repeat -90px -6px;
     width: 7px;
     height: 4px;
+}
+
+.stars {
+    background: url('../assets/images/3-fm1Jbg4IHlyhq.png') no-repeat -84px -28px;
+    width: 80px;
+    height: 15px;
+}
+.prime{
+    background: url('../assets/images/E6vgqiIirWgGb3f.png') no-repeat -138px -73px;
+    width: 42px;
+    height: 12px;
+}
+
+/*Card*/
+.card {
+    width:13rem;
+    height: 100%;
+}
+.card-text {
+    text-align: left;
+    width:90%;
+
+    /*padding:   1rem 0;*/
+    color:var(--blue-text);
+    font-size: 1rem;
+    white-space: normal;
+
 }
