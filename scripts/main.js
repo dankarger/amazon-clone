@@ -68,7 +68,7 @@ function injectRowOfCards(cards) {
 }
 
 let pageItems = 5
-// let pageNumber = 0;
+
 let pages = paginator(productsDataBase,pageItems)
 
 
@@ -79,9 +79,14 @@ function createCarousel(pages,pageNumber) {
 
 
 function pageChange(value,pages,pageNumber){
-   let newPageNumber= pageSelector(value,pages,pageNumber)
+   let newPageNumber= pageSelector(value,pages)
+
+    if(newPageNumber===pageNumber) {
+        return
+    }
     createCarousel(pages, newPageNumber)
 }
 
 
+console.log(pages)
 createCarousel(pages,pageNumber)

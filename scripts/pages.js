@@ -12,22 +12,22 @@ export function paginator(data,pageItems) {
 
 }
 
-export function pageSelector(value,pages,pageNumber) {
+export function pageSelector(value,pages) {
     if (value === 'up') {
         if(pageNumber<pages.length-1) {
             pageNumber++
             return pageNumber
-        }else{
-            return  pageNumber
         }
+        return  pageNumber
+
     }
     if (value === 'down') {
         if(pageNumber>0) {
             pageNumber--
             return pageNumber
-        }else{
-            return  pageNumber
         }
+            return  pageNumber
+
     }
 }
 
