@@ -7,6 +7,10 @@ const smallImagesArray = [smallImage1, smallImage2, smallImage3]
 let cartNumber = document.querySelector('.cart-number')
 const addCartButton = document.querySelector('.btn-add')
 const buyNowButton = document.querySelector('.btn-buy')
+let carousel = document.querySelector('.carousel-card-div')
+
+
+
 
 smallImage1.addEventListener('mouseover',()=>changeImage('../assets/images/91k6YqnolGL._AC_SX679_.jpg', smallImage1))
 smallImage2.addEventListener('mouseover',()=>changeImage('../assets/images/61LaT97MXJL._AC_SX679_.jpg',smallImage2))
@@ -40,48 +44,93 @@ function removeCart() {
     prevValue>0?cartNumber.innerHTML--:cartNumber.innerHTML = '0';
 }
 
-class Card {
-    constructor(img,text,stars,rating,price,prime) {
-        this.img=` <img class="card-img" src="${img}" alt="img">`
-        this.text = `<h4 class="card-text">${text}</h4>`
-        this.stars =`<div class="${stars}">`
-        this.rating= `<div class="cardl-rating">
-                              <a href="#">${rating} </a>
-                          </div>`
-        this.price = `<div class="card-price-div">
-                       <h3>${price}</h3>
-                       </div>`
-        this.prime=`<div class="${prime}">`
+// class Card {
+//     constructor(img,text,stars,rating,price,prime) {
+//         this.img=` <img class="card-img" src="${img}" alt="img">`
+//         this.text = `<h4 class="card-text">${text}</h4>`
+//         this.stars =`<div class="${stars}">`
+//         this.rating= `<div class="cardl-rating">
+//                               <a href="#">${rating} </a>
+//                           </div>`
+//         this.price = `<div class="card-price-div">
+//                        <h3>${price}</h3>
+//                        </div>`
+//         this.prime=`<div class="${prime}">`
+//
+//     }
+// }
 
-    }
-}
-
-const productsDataBase =
+const productsDataBase = [
     {
         img:"../assets/images/41lRhUCEBOL._AC_SR160,160_.jpg",
         text:'D Z Strad Carbon Fiber Cello Bow with Traditional Frog made from Polished Premium Ebony 4/4 Full Size\n' +
             'D Z Strad Carbon Fiber Cello Bow with Traditional Frog made from Polished…\n',
         stars:'stars',
         rating:'16',
-        price:'$129.00 ',
+        price:'$129.00',
+        prime:'prime'
+    },
+    {
+        img:"../assets/images/61K1RfassZS._AC_UL160_SR160,160_.jpg",
+        text: 'Aileen 4/4 Full Size Burgundy Wooden Cello Box Stand, Black Premium Velvet Plush Interior Including Bow Holder with Anti-Slip Mat\n' +
+            'Aileen 4/4 Full Size Burgundy Wooden Cello Box Stand, Black Premium Velvet Plush…\n',
+        stars:'stars',
+        rating:'51',
+        price:'$145.99',
+        prime:'prime'
+    },{
+        img:"../assets/images/41j7-wCYxnL._AC_SR160,160_.jpg",
+        text:'Cello Stand Adjustable, Folding Cello Support Stand, A-Frame Folding Cello Holder Compatible for Violin 1/8-4/4 Cellos Guitars Electric Bass Electric Guitar Stand Acoustic, Black\n' +
+            'Cello Stand Adjustable, Folding Cello Support Stand, A-Frame Folding Cello Holder C...\n',
+        stars:'stars',
+        rating:'10',
+        price:'$30.99',
+        prime:'prime'
+    },
+    {
+        img:"../assets/images/41VQomgeOIL._AC_SR160,160_.jpg",
+        text:'Cello Strings 1 Full Set A-D-G-C Steel Core Nickel Chromium Wound for Size 1/4 1/2 3/4 4/4\n' +
+            'Cello Strings 1 Full Set A-D-G-C Steel Core Nickel Chromium Wound for Size 1/4 1/2 ...\n',
+        stars:'stars',
+        rating:'110',
+        price:'$13.99',
+        prime:'prime'
+    },{
+        img:"../assets/images/51k7rvaYVcL._AC_SR160,160_ (1).jpg",
+        text:'Touch of Class Ayden Music Stand Windsor Oak One Size\n' +
+            'Touch of Class Ayden Music Stand Windsor Oak One Size\n',
+        stars:'stars2',
+        rating:'2',
+        price:'$169.00',
         prime:'prime'
     }
-
+    ]
 
 // let newCard = new Card(productsDataBase[0]['img'],productsDataBase[0]['text'],productsDataBase[0]['stars'],productsDataBase[0]['rating'],productsDataBase[0]['price'],productsDataBase[0]['prime'])
 // console.log(newCard)
-let newCard = new Card(productsDataBase['img'],productsDataBase['text'],productsDataBase['stars'],productsDataBase['rating'],productsDataBase['price'],productsDataBase['prime'])
+// let newCard = new Card(productsDataBase['img'],productsDataBase['text'],productsDataBase['stars'],productsDataBase['rating'],productsDataBase['price'],productsDataBase['prime'])
 
-let carousel = document.querySelector('.carousel-card-div')
 
 function injectCard(card) {
-   return carousel.innerHTML = `<div class="card"> ${card.img} \n ${card.text}\n ${card.stars}\n ${card.rating}\n ${card.price}\n ${card.prime} </div>`
+   return carousel.innerHTML += `<div class="card"> <img class="card-img" src="${card.img}" alt="img">
+                                \n <h4 class="card-text">${card.text}</h4>\n
+                                 <div class="${card.stars}">\n
+                                  <div class="cardl-rating">
+                                   <a href="#">${card.rating} </a>
+                                   </div>\n
+                                    <div class="card-price-div">
+                                     <h3>${card.price}</h3>
+                                    </div>\n
+                                    <div class="${card.prime} </div>`
 }
 
-injectCard(newCard)
+// injectCard(newCard)
 
 function injectRowOfCards(cards) {
-
+    cards.forEach(card=>{
+        injectCard(card)
+    })
 
 
 }
+injectRowOfCards(productsDataBase)

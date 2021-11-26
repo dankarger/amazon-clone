@@ -340,3 +340,10 @@ body {
     color: var(--grey2);
 }
 
+.carousel-card-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
