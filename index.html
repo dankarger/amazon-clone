@@ -87,7 +87,7 @@
                              </div>
                                  <div><p>Cart</p></div>
                                  <div class="number-div">
-                                     <p>0</p>
+                                     <p class="cart-number">0</p>
                                  </div>
                              </div>
                              </a>
@@ -243,9 +243,9 @@
                     </div>
                     <div class="qty-div">
                         <span>Qty:</span>
-                        <input type="number" min="1" max="5">
-                    </div>
-                    <div class="buttons-div">
+                        <input id="qty-number" type="number" min="1" max="5" value="1">
+                     </div>
+                     <div class="buttons-div">
                         <button class="btn-add">
                                 Add to Cart
                         </button>
@@ -261,17 +261,36 @@
                         </div>
                         <div class="return-policy-div">
                             <h4>Return policy: <span>Returnable until</span> </h4>
-                            <h4><span class="date-returnable">Jan 31,2022</span></h4>
+                            <h4><span class="date-returnable">Jan 31,2022</span><span><div class="chevron-down"></div></span></h4>
+                            <div class="checkbox-div">
+                                <label for="gift-wrap"><input id="gift-wrap" type="checkbox" name="gift-wrap" value="yes"><i class="a-icon a-icon-checkbox"></i><span class="a-label a-checkbox-label">Add a gift receipt for easy returns</span></label>
+                            </div>
                         </div>
-                    </div>
+
+                        <button class="btn-add-to-list">
+                            Add to List
+                        </button>
+                      </div>
                 </div>
+          </div>
+          <div class="hr-div">
+              <div class="hr-custom">
+              </div>
+          </div>
+<!--          Caeouselle-->
+          <div class="carousel-div">
+              <h3>Product related to this item</h3>
+              <div class="sponsor-div">
+                  <p>Sponsor <span><i class="fas fa-info-circle"></i></span></p>
+              </div>
+              <div class="carousel">
+
+              </div>
 
           </div>
+
       </section>
-
   </div>
-
-
 
 </main>
     <script src="./scripts/main.js"></script>
@@ -280,8 +299,9 @@
 
 
 <!--TODO: fix navbar search-->
-<!--TODO:cart adding number-->
+<!--TODO: fix main image scale and size-->
 <!--TODO:caroussel-->
 <!--TODO: make an arrives date dynamic variable js-->
 <!--TODO: change arrow down and right to spites-->
-<!--TODO:change theqty input to radio-->
+<!--TODO:change the qty input to radio-->
+<!--TODO: find the right yellow color for buy button-->
