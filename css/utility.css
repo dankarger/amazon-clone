@@ -6,6 +6,8 @@
     --white:#ffffff;
     --white2:#FAFAFA;
     --black:#0F1111;
+    --grey:#333332;
+    --blue-text:#007185;
     --button-yellow:#F7CA00;
     --button-orange:#FA8900;
     --brown:#CC6600;
@@ -28,6 +30,8 @@ h4 {
 
 p {
     margin: 0;
+    font-weight: 100;
+    /*text-shadow: white 0  0  10px;*/
 }
 
 .hr-custom {
@@ -36,5 +40,25 @@ p {
     border-bottom:solid 0.07rem #dbdad9;
     opacity: 0.8;
 
+}
 
+/*Buttons*/
+
+button {
+    padding:0.5rem 1rem;
+    width:100%;
+    border-radius:50px;
+    border: none;
+    font-weight: 200;
+    font-size: 0.97rem;
+    margin:0.3rem 0
+}
+button:hover {
+    filter:brightness(95%);
+}
+.btn-add {
+    background:#e6de49 ;
+}
+.btn-buy {
+    background: var(--orange);
 }
