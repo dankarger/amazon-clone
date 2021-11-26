@@ -23,7 +23,10 @@ body {
 }
 
 .main-content-div {
-
+    width:100%;
+    height:100%;
+    padding:1px;
+    letter-spacing: 0.5px;
 }
 
 #main-middle {
@@ -77,12 +80,11 @@ body {
 }
 .main-image {
 
-    width:60%;
+    width:100%;
     height:100%;
-    min-width: 20rem;
-    min-height: 20rem;
-    /*max-height: 80%;*/
-    /*height: auto;*/
+    min-width: 40rem;
+    min-height: 30rem;
+
     object-fit: cover;
 
 }
@@ -100,8 +102,6 @@ body {
     width:40%;
     height:100%;
     padding: 0 1.5rem;
-
-
 }
 .main-right-info-div {
 
@@ -113,6 +113,7 @@ body {
     align-items: start;
     flex-direction: column;
     color:#007185;
+    line-height: 2;
 }
 .visit-and-rating-div a:hover {
     color: #c93f2c;
@@ -147,6 +148,7 @@ body {
     list-style: disc ;
     margin-left:1.2rem;
     color: var(--black);
+    line-height: 1.4;
 }
 .new {
     margin-top: 1rem;
@@ -156,4 +158,7 @@ body {
 /**/
 .right-price-div {
     color:#B12634;
+}
+.main-title h1{
+    font-size:  2rem;
 }
