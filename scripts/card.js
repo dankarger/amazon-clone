@@ -10,7 +10,7 @@ export function injectCard(card) {
                                     <div class="card-price-div">
                                      <h3>${card.price}</h3>
                                     </div>\n
-                                    <div class="${card.prime} </div>`
+                                    <div class="${card.prime}" </div>`
 }
 
 export function injectRowOfCards(cards) {

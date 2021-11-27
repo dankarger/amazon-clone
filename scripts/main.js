@@ -80,14 +80,14 @@ function checkWidth(width){
         restOfPages.innerHTML = pages.length
         return createCarousel(pages, pageNumber)
     }
-    else if (width<800&&width>600&&pageItems!==2){
+    else if (width<850&&width>600&&pageItems!==2){
          pageItems= 2
          pages = paginator(productsDataBase,pageItems)
         currentPage.innerHTML=pageNumber+1
         restOfPages.innerHTML = pages.length
          return createCarousel(pages, pageNumber)
     }
-    else if(width>800&&width<1100&&pageItems!==3){
+    else if(width>850&&width<1100&&pageItems!==3){
         pageItems= 3
         pages = paginator(productsDataBase,pageItems)
         currentPage.innerHTML=pageNumber+1

@@ -7,7 +7,6 @@ let qty = document.querySelector('#qty-number')
 export  function addCart() {
     let prevValue = parseInt(cartNumber.innerHTML)
     let qtyNumber = parseInt(qty.value)
-    console.log(prevValue)
     let mewNumber = prevValue + qtyNumber
     if(prevValue<99){
         cartNumber.innerHTML = mewNumber.toString()

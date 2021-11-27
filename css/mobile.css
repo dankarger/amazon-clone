@@ -6,6 +6,9 @@
 .desktop {
     display: none;
 }
+body {
+    overflow-x: hidden;
+}
 #nav {
     display:none;
 }
@@ -166,7 +169,7 @@
     margin:1rem;
     width:40%;
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 200;
 }
 
 .btn-add-to-list {
