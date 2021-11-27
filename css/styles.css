@@ -300,6 +300,11 @@ body {
     margin:0.3rem 0 ;
 
 }
+.header-carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .carousel-div .sponsor-div p {
     font-size: 0.8rem;
     letter-spacing: 1px;
@@ -310,6 +315,11 @@ body {
 }
 .carousel-div .sponsor-div  p span i:hover {
     color: var(--black);
+}
+ .page-of-div {
+    text-align: right;
+     display: inline ;
+     margin-bottom:2rem;
 }
 
 .carousel {
