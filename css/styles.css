@@ -6,7 +6,6 @@ html, body {
 
     scroll-behavior: smooth;
     font-size: 14px;
-    /*overflow: hidden;*/
 }
 html {
     width: 100vw;
@@ -15,20 +14,14 @@ html {
 body {
     box-sizing: border-box;
     font-family: "amazon", sans-serif;
-    /*width: 100vw;*/
     height:100%;
-    /*height: 100vh;*/
     scroll-behavior: smooth;
-
-
 }
+
 /*Main*/
 #main {
     width: 100%;
     margin:0;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
     padding-bottom:2rem;
 
 }
@@ -36,92 +29,60 @@ body {
 .main-content-div {
     width:100%;
     height:100%;
-    /*padding:0 1rem;*/
     letter-spacing: 0.5px;
-    /*overflow: hidden;*/
 }
 
 #main-middle {
-    /*overflow: hidden;*/
     max-width:90%;
     height:100%;
     margin:auto;
-    /*display: flex;*/
-    /*justify-content: space-evenly;*/
-    /*align-items: start;*/
-    /*flex-direction: column;*/
-
-
-
-
 }
 .main-middle-content-div {
     width:100%;
-    /*height:100%;*/
-  /*  display: flex;*/
-  /*justify-content: center;*/
-  /*  align-items: center;*/
-
 }
 /*Product-div*/
 
  .product-div {
-     /*padding:1rem 1rem ;*/
      box-sizing: border-box;
     width:100%;
     height:100%;
-     /*margin:1rem 2rem;*/
  display: flex;
      justify-content: space-around;
      align-items: start;
 
 }
 
-#main .left-img-bar-div{
-    /*width:4%;*/
-    /*height: 100px ;*/
-}
+
  .left-img-bar-div {
     max-width:100px;
     height: 100px;
 
-
-
-}.left-img-bar-div .small-img1,.left-img-bar-div .small-img2,.left-img-bar-div .small-img3{
+}
+.left-img-bar-div .small-img1,.left-img-bar-div .small-img2,.left-img-bar-div .small-img3{
     /*padding:0.2rem 0;*/
     margin:0.6rem 0;
     border:1px solid var(--black);
-
   }
 .left-img-bar-div .small-img1:hover,.left-img-bar-div .small-img2:hover,.left-img-bar-div .small-img3:hover {
     border-color: #f2672c;
     box-shadow:  3px 3px 3px var(--orange);
-
 }
-
 .main-image-div {
     margin-top:1rem;
     min-width:30rem;
-
     width: 40%;
     height: 100%;
-
 }
 .main-image {
     width:100%;
     height:100%;
     object-fit: fill;
 }
-
-
 .main-middle-text-div{
     width:40%;
     height:100%;
     padding: 0 1.5rem;
     margin:1rem 0;
-}
-.main-right-info-div {
-
 }
 
 .visit-and-rating-div {
@@ -149,8 +110,6 @@ body {
 }
 /*icons*/
 
-
-
 .ul-main-div ul {
     list-style: disc ;
     margin-left:1.2rem;
@@ -165,11 +124,9 @@ body {
 /**/
 
 .main-right-info-div {
-    /*max-width:12%;*/
     min-width: 15rem;
     height:100%;
     width:15rem;
-    /*margin-right:12rem;*/
     border:1px solid #dbdad9;
     padding:1rem;
     border-radius:10px;
@@ -177,7 +134,6 @@ body {
     justify-content: center;
     align-items: start;
     flex-direction: column;
-
 }
 
 .right-price-div {
@@ -209,13 +165,10 @@ body {
     font-weight: 300;
 }
 .qty-div{
-
     width:50px;
     height:20px;
-    /*background:var(--white2) ;*/
     position: relative;
     margin-bottom: 0.7rem;
-
 }
 .qty-div:hover {
 
@@ -232,7 +185,6 @@ body {
     margin-left:0.3rem;
 }
 .qty-div input , .qty-div select{
-    /*padding:0 1.2rem;*/
     background: #E3E6E6;
     width:  70px;
     height: 30px;
@@ -309,7 +261,6 @@ body {
     font-weight: 700;
     letter-spacing: 0;
     margin:0.3rem 0 ;
-
 }
 .page-of-div{
     margin-right:20%;
@@ -343,7 +294,6 @@ body {
     align-items: center;
     justify-content: left;
     flex-direction: row;
-
 }
  .chevron-left-big-icon , .chevron-right-big-icon{
      display: flex;

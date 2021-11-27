@@ -21,9 +21,7 @@
 .mobile {
     display: none;
 }
-/*.desktop {*/
-/*    display: none;*/
-/*}*/
+
 ul {
     list-style: none;
     margin:0;
@@ -43,7 +41,6 @@ option {
 p {
     margin: 0;
     font-weight: 100;
-    /*text-shadow: white 0  0  10px;*/
 }
 
 .hr-custom {
@@ -78,20 +75,15 @@ button:hover {
 .btn-buy {
     background: var(--orange);
 }
-
 .btn-add-to-list {
-    /*background: var(--grey);*/
     border-radius: 5px;
-    /*box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);*/
     box-shadow: 0 0 60px #ccc;
     border:0.5px solid var(--grey)
 }
 .btn-add-to-list:hover {
-    /*background: inherit;*/
     filter:none;
     cursor: pointer;
 }
-
 
 /*ICONS*/
 
@@ -140,11 +132,9 @@ button:hover {
     text-align: left;
     width:90%;
      height:50%;
-    /*padding:   1rem 0;*/
     color:var(--blue-text);
     font-size: 1rem;
     white-space: normal;
-
 }
 
 .page-item {

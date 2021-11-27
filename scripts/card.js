@@ -1,5 +1,6 @@
 let carousel = document.querySelector('.carousel-card-div')
 
+//function to create a card element for the html carousel
 export function injectCard(card) {
     return carousel.innerHTML += `<div class="card"> <img class="card-img" src="${card.img}" alt="img">
                                 \n <h4 class="card-text"><a src="#">${card.text.substr(0, 100)}...</a></h4>\n
@@ -13,6 +14,7 @@ export function injectCard(card) {
                                     <div class="${card.prime}" </div>`
 }
 
+// a function to create a row of cards ,
 export function injectRowOfCards(cards) {
     carousel.innerHTML=''
     cards.forEach(card => {

@@ -1,9 +1,8 @@
 let cartNumber = document.querySelector('.cart-number')
 let cartNumberMobile = document.querySelector('.cart-number-mobile')
 let qty = document.querySelector('#qty-number')
-// const qtyNumber = parseInt(document.getElementById('qty-number').text)
 
-
+//functions to add and remove items from the cart number in the navbar,
 export  function addCart() {
     let prevValue = parseInt(cartNumber.innerHTML)
     let qtyNumber = parseInt(qty.value)
