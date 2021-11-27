@@ -1,17 +1,19 @@
 import {productsDataBase} from "./data.js";
 import {paginator, pageSelector, pageNumber} from "./pages.js";
+import {injectRowOfCards} from "./card.js";
+import{addCart,removeCart} from "./cart.js";
 
 let mainImage = document.querySelector('.main-image')
 const smallImage1 = document.querySelector('.small-img1')
 const smallImage2 = document.querySelector('.small-img2')
 const smallImage3 = document.querySelector('.small-img3')
 const smallImagesArray = [smallImage1, smallImage2, smallImage3]
-let cartNumber = document.querySelector('.cart-number')
 const addCartButton = document.querySelector('.btn-add')
 const buyNowButton = document.querySelector('.btn-buy')
-let carousel = document.querySelector('.carousel-card-div')
 let carouselleftButton = document.querySelector('.chevron-left-big-icon')
 let carouselRightButton = document.querySelector('.chevron-right-big-icon')
+let width = window.innerWidth
+let pageItems = 7
 
 
 smallImage1.addEventListener('mouseover', () => changeImage('../assets/images/91k6YqnolGL._AC_SX679_.jpg', smallImage1))
@@ -21,7 +23,7 @@ addCartButton.addEventListener('click', () => {addCart()})
 buyNowButton.addEventListener('click', () => {removeCart()})
 carouselleftButton.addEventListener('click', () => {pageChange('down',pages,pageNumber)})
 carouselRightButton.addEventListener('click', () => {pageChange('up',pages,pageNumber)})
-
+window.addEventListener('resize',()=>{checkWidth(width)})
 
 function changeImage(image, imageElement) {
     smallImagesArray.forEach(el => {
@@ -31,44 +33,10 @@ function changeImage(image, imageElement) {
     imageElement.style.boxShadow = '1px 1px 2px var(--orange)'
     imageElement.style.borderColor = '#f2672c'
     return mainImage.src = image
-
 }
 
-function addCart() {
-    const qtyNumber = parseInt(document.getElementById('qty-number').value)
-    console.log(qtyNumber)
-    let prevValue = parseInt(cartNumber.innerHTML)
-    let mewNumber = prevValue + qtyNumber
-    prevValue < 50 ? cartNumber.innerHTML = mewNumber : cartNumber.innerHTML = prevValue
-}
-function removeCart() {
-    let prevValue = parseInt(cartNumber.innerHTML)
-    prevValue > 0 ? cartNumber.innerHTML-- : cartNumber.innerHTML = '0';
-}
 
-function injectCard(card) {
-    return carousel.innerHTML += `<div class="card"> <img class="card-img" src="${card.img}" alt="img">
-                                \n <h4 class="card-text">${card.text.substr(0, 100)}...</h4>\n
-                                 <div class="${card.stars}">\n
-                                  <div class="cardl-rating">
-                                   <a href="#">${card.rating} </a>
-                                   </div>\n
-                                    <div class="card-price-div">
-                                     <h3>${card.price}</h3>
-                                    </div>\n
-                                    <div class="${card.prime} </div>`
-}
-
-function injectRowOfCards(cards) {
-    carousel.innerHTML=''
-    cards.forEach(card => {
-        injectCard(card)
-    })
-
-}
-
-let pageItems = 5
-
+if(width<1000){pageItems=3}
 let pages = paginator(productsDataBase,pageItems)
 
 
@@ -77,16 +45,30 @@ function createCarousel(pages,pageNumber) {
       injectRowOfCards(cards)
 }
 
-
 function pageChange(value,pages,pageNumber){
    let newPageNumber= pageSelector(value,pages)
-
     if(newPageNumber===pageNumber) {
         return
     }
     createCarousel(pages, newPageNumber)
 }
 
+function checkWidth(width){
+     width = window.innerWidth
+    console.log('width',width)
+    if (width<1000&&pageItems!==3){
+        pageItems= 3
+         pages = paginator(productsDataBase,pageItems)
 
-console.log(pages)
+        return createCarousel(pages, pageNumber)
+    }
+    else if(width>1000&&pageItems!==7){
+        console.log('gggggg')
+        pageItems= 7
+        pages = paginator(productsDataBase,pageItems)
+        console.log('pageeee',pages)
+
+        return  createCarousel(pages, pageNumber)
+    }
+}
 createCarousel(pages,pageNumber)

@@ -43,7 +43,7 @@ export const productsDataBase = [
         prime: 'prime'
     },
     {
-        img: "../assets/images/51k7rvaYVcL._AC_SR160,160_ (1).jpg",
+        img: "../assets/images/41JRrSJZbYL._AC_SR160,160_.jpg",
         text: 'Hiiiii Touch of Class Ayden Music Stand Windsor Oak One Size\n' +
             'Touch of Class Ayden Music Stand Windsor Oak One Size\n',
         stars: 'stars2',
@@ -64,6 +64,23 @@ export const productsDataBase = [
         stars: 'stars',
         rating: '121',
         price: '$169.00',
+        prime: 'prime'
+    },
+    {
+        img: "../assets/images/41JRrSJZbYL._AC_SR160,160_.jpg",
+        text: 'D\'Addario Kaplan Cello String Set, 4/4 Scale, Medium Tension\n' +
+            'D\'Addario Kaplan Cello String Set, 4/4 Scale, Medium Tension\n',
+        stars: 'stars',
+        rating: '71',
+        price: '$199.99',
+        prime: 'prime'
+    },
+    {
+        img: "../assets/images/41yQV6KTx0S._AC_SR160,160_.jpg",
+        text: 'Viotti Violin Bridge 4/4: Finer Grade Solid Maple Violin Bridge, Pre-Cut & Pre-Fitted to Fit Most',
+        stars: 'stars',
+        rating: '38',
+        price: '$15.45',
         prime: 'prime'
     }
 ]

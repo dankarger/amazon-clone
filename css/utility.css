@@ -15,6 +15,7 @@
     --button-orange:#FA8900;
     --brown:#CC6600;
     --cart-number:#F08804;
+    --number-of-items:5;
 }
 
 ul {
@@ -123,4 +124,13 @@ button:hover {
     font-size: 1rem;
     white-space: normal;
 
+}
+
+.page-item {
+    content: var(--number-of-items);
+}
+.card a:hover{
+    color:var(--red-text);
+    cursor: pointer;
+    text-decoration: underline;
 }
