@@ -12,9 +12,14 @@ const addCartButton = document.querySelector('.btn-add')
 const buyNowButton = document.querySelector('.btn-buy')
 let carouselleftButton = document.querySelector('.chevron-left-big-icon')
 let carouselRightButton = document.querySelector('.chevron-right-big-icon')
+let pageItems = 1
 let width = window.innerWidth
-let pageItems = 7
-
+if(width<600)pageItems=1
+if(width<800&&width>600)pageItems=2
+if(width<1100&&width>800)pageItems=3
+if(width<1300&&width>1100)pageItems=4
+if(width>1300)pageItems=6
+// checkWidth(width)
 
 smallImage1.addEventListener('mouseover', () => changeImage('../assets/images/91k6YqnolGL._AC_SX679_.jpg', smallImage1))
 smallImage2.addEventListener('mouseover', () => changeImage('../assets/images/61LaT97MXJL._AC_SX679_.jpg', smallImage2))
@@ -36,7 +41,7 @@ function changeImage(image, imageElement) {
 }
 
 
-if(width<1000){pageItems=3}
+// if(width<1000){pageItems=3}
 let pages = paginator(productsDataBase,pageItems)
 
 
@@ -55,19 +60,29 @@ function pageChange(value,pages,pageNumber){
 
 function checkWidth(width){
      width = window.innerWidth
-    console.log('width',width)
-    if (width<1000&&pageItems!==3){
-        pageItems= 3
-         pages = paginator(productsDataBase,pageItems)
-
+    if(width<600&&pageItems!==1){
+        pageItems= 1
+        pages = paginator(productsDataBase,pageItems)
         return createCarousel(pages, pageNumber)
     }
-    else if(width>1000&&pageItems!==7){
-        console.log('gggggg')
-        pageItems= 7
+    else if (width<800&&width>600&&pageItems!==2){
+         pageItems= 2
+         pages = paginator(productsDataBase,pageItems)
+         return createCarousel(pages, pageNumber)
+    }
+    else if(width>800&&width<1100&&pageItems!==3){
+        pageItems= 3
         pages = paginator(productsDataBase,pageItems)
-        console.log('pageeee',pages)
-
+        return createCarousel(pages, pageNumber)
+    }
+    else if(width>1100&&width<1300&&pageItems!==4){
+        pageItems= 4
+        pages = paginator(productsDataBase,pageItems)
+        return  createCarousel(pages, pageNumber)
+    }
+    else if(width>1300 &&pageItems!==6){
+        pageItems= 6
+        pages = paginator(productsDataBase,pageItems)
         return  createCarousel(pages, pageNumber)
     }
 }

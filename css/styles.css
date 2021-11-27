@@ -99,8 +99,8 @@ body {
 
 .main-image-div {
     margin-top:1rem;
-    min-width:200px;
-    max-height: 50%;
+    min-width:30rem;
+
     width: 40%;
     height: 100%;
 
@@ -320,6 +320,7 @@ body {
     justify-content: left;
     flex-direction: row;
 
+
 }
  .chevron-left-big-icon , .chevron-right-big-icon{
      display: flex;
@@ -346,4 +347,5 @@ body {
     align-items: center;
     width: 80%;
     height: 100%;
+    overflow: hidden;
 }
