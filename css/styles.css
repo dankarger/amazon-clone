@@ -300,6 +300,9 @@ body {
     margin:0.3rem 0 ;
 
 }
+.page-of-div{
+    margin-right:20%;
+}
 .header-carousel {
     display: flex;
     justify-content: space-between;
