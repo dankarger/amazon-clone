@@ -93,6 +93,11 @@ button:hover {
     height: 4px;
 }
 
+.chevron-right {
+    background: url('../assets/images/McBZv0ZvnbehkIx.png') no-repeat -67px -42px;
+    width: 8px;
+    height: 11px;
+}
 .stars {
     background: url('../assets/images/3-fm1Jbg4IHlyhq.png') no-repeat -84px -28px;
     width: 80px;
@@ -111,8 +116,8 @@ button:hover {
 
 /*Card*/
 .card {
-    width:13rem;
-    height: 100%;
+    width:14rem;
+    min-height: 100%;
     margin:0 1rem  ;
 }
 .card-text {
