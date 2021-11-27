@@ -165,7 +165,7 @@
             </div>
             <div class="nav-mobile-right-div nav-item-mobile">
                 <div class="sign-in-div">
-                    <p> Sign In <div class="chevron-right"></div>  </p>
+                    <p> Sign In </p> <div class="chevron-right"></div>
                     <div class="sign-in-icon">
                         <i class="far fa-user"></i>
                     </div>
@@ -309,7 +309,15 @@
                     </div>
                     <div class="qty-div">
                         <span>Qty:</span>
-                        <input id="qty-number" type="number" min="1" max="5" value="1">
+                        <label for="qty-number"></label>
+                        <select id="qty-number" name="qty"  >
+                            <option value="1" selected>1</option>
+                            <option value="2">2</option>
+                            <option value="3" >3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+<!--                        <input id="qty-number" type="number" min="1" max="5" value="1">-->
                      </div>
                      <div class="buttons-div">
                          <div class="buttons-div-inner">
@@ -329,7 +337,7 @@
                         </div>
                         <div class="return-policy-div">
                             <h4>Return policy: <span>Returnable until</span> </h4>
-                            <h4><span class="date-returnable">Jan 31,2022</span><span><div class="chevron-down"></div></span></h4>
+                            <h4><span class="date-returnable">Jan 31,2022</span><div class="chevron-down"><span></span></div></h4>
                             <div class="checkbox-div">
                                 <label for="gift-wrap"><input id="gift-wrap" type="checkbox" name="gift-wrap" value="yes"><i class="a-icon a-icon-checkbox"></i><span class="a-label a-checkbox-label">Add a gift receipt for easy returns</span></label>
                             </div>
@@ -370,6 +378,7 @@
                   </div>
               </div>
           </div>
+
       </section>
   </div>
 </main>

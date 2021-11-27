@@ -212,7 +212,7 @@ body {
 
     width:50px;
     height:20px;
-    background:var(--white2) ;
+    /*background:var(--white2) ;*/
     position: relative;
     margin-bottom: 0.7rem;
 
@@ -220,33 +220,44 @@ body {
 .qty-div:hover {
 
 }
+.qty-div select {
+    padding:0.5rem;
+}
 .qty-div span{
     position: absolute;
-    top:0;
-    font-size: 1rem;
+    top:8px;
+    left:5px;
+    font-size: 0.9rem;
     font-weight: 100;
-    /*padding:0 1rem;*/
+    margin-left:0.3rem;
 }
-.qty-div input {
-    padding:0 1.2rem;
-    width:  40px;
-    height: 20px;
+.qty-div input , .qty-div select{
+    /*padding:0 1.2rem;*/
+    background: #E3E6E6;
+    width:  70px;
+    height: 30px;
     border:1px rgba(145, 145, 140,0.8) solid;
-    border-radius: 20px;
+    border-radius: 10px;
     font-weight: 100;
     font-size: 1rem;
     text-align: right;
     box-shadow: 0 0 50px #ccc;
+    color:var(--black);
+    margin-bottom: 1rem;
 }
-.qty-div input:focus {
+.qty-div input , .qty-div select option{
+    color:black
+}
+.qty-div input:focus , .qty-div select:focus{
     border-color: rgba(145, 145, 140,0.8);
     outline: none;
 }
-.qty-div input:hover {
+.qty-div input:hover , .qty-div select:hover{
     background:rgba(145, 145, 140,0.4);
 }
 
 .buttons-div {
+    margin-top: 1rem;
     width:100%;
     height:100%;
 }

@@ -37,7 +37,9 @@ a{
 h4 {
 
 }
-
+option {
+    color: black;
+}
 p {
     margin: 0;
     font-weight: 100;

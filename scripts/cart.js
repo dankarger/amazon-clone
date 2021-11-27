@@ -1,10 +1,13 @@
 let cartNumber = document.querySelector('.cart-number')
 let cartNumberMobile = document.querySelector('.cart-number-mobile')
+let qty = document.querySelector('#qty-number')
+// const qtyNumber = parseInt(document.getElementById('qty-number').text)
 
 
 export  function addCart() {
-    const qtyNumber = parseInt(document.getElementById('qty-number').value)
     let prevValue = parseInt(cartNumber.innerHTML)
+    let qtyNumber = parseInt(qty.value)
+    console.log(prevValue)
     let mewNumber = prevValue + qtyNumber
     if(prevValue<99){
         cartNumber.innerHTML = mewNumber.toString()
