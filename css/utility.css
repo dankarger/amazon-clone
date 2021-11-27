@@ -18,6 +18,12 @@
     --number-of-items:5;
 }
 
+.mobile {
+    display: none;
+}
+/*.desktop {*/
+/*    display: none;*/
+/*}*/
 ul {
     list-style: none;
     margin:0;
@@ -114,16 +120,24 @@ button:hover {
     height: 12px;
 }
 
+.rating, .questions {
+    white-space: nowrap;
+}
+.price-middle-div {
+    color:#565959
+}
 /*Card*/
 .card {
     width:14rem;
     min-height: 100%;
     margin:0 1rem  ;
+
+
 }
 .card-text {
     text-align: left;
     width:90%;
-
+     height:50%;
     /*padding:   1rem 0;*/
     color:var(--blue-text);
     font-size: 1rem;
@@ -138,4 +152,10 @@ button:hover {
     color:var(--red-text);
     cursor: pointer;
     text-decoration: underline;
+}
+.card-rating{
+    text-align: right;
+    transform: translateX(20px);
+    color:var(--blue-text)
+
 }

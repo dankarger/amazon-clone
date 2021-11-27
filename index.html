@@ -25,9 +25,9 @@
                              <div class="nav-item-top" >
                                     <a href="#" ><div class="nav-logo"></div></a>
                              </div>
-                             <div class="deliver-to-div nav-item-top">
+                             <div class="deliver-to-div nav-item-top desktop">
                                  <a href="#">
-                                     <div class="deliver-box">
+                                     <div class="deliver-box  desktop">
                                             <div class="location-icon">
                                             </div>
                                          <div class="deliver-text">
@@ -154,9 +154,10 @@
         </div>
 <!--        Mobile-Nav-->
         <div id="nav-mobile">
+            <div class="nav-mobile-top">
             <div class="nav-mobile-left-div ">
-                <div class="hamburger-div nav-item-mobile">
-                    hamburger
+                <div class="hamburger-div-mobile nav-item-mobile">
+                        <i class="fas fa-bars"></i>
                 </div>
                 <div class="nav-item-mobile" >
                     <a href="#" ><div class="nav-logo"></div></a>
@@ -172,24 +173,54 @@
                 <div class="nav-mobile-cart-div">
                     <div class="cart-div nav-item-mobile">
                         <a href="#"><div class="cart-container">
-
-
                             <div class="cart-icon">
                             </div>
                             <div><p>Cart</p></div>
                             <div class="number-div">
-                                <p class="cart-number">0</p>
+                                <p class="cart-number-mobile">0</p>
                             </div>
                         </div>
                         </a>
                     </div>
                 </div>
             </div>
+          </div>
+            <div class="nav-mobile-bottom">
+                <div class="nav-middle-mobile">
+                    <div class="search-bar-nav-mobile">
+                        <div class="all">
+                            <a href="#">All &nbsp ▾</a>
+                        </div>
+                        <!--                             <div class="bar">-->
+                        <!--                                 <input id="search-bar-input" type="text">-->
+                        <!--                             </div>-->
+
+                        <div class="glass-div">
+                            <div class="search-glass-icon">
+                                <a href="#"><div class="search-icon"></div>  </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-mobile-deliver-to-div">
+                <div class="deliver-to-div nav-item-mobile">
+                    <a href="#">
+                        <div class="deliver-box">
+                            <div class="location-icon">
+                            </div>
+                            <div class="deliver-text">
+                                <p class="text-top">Deliver to ISRAEL</p>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
 <!--        end of the mobile -->
     </header>
 <main>
-
       <div class="hr-custom"></div>
       <section id="main-middle">
           <div class="main-middle-content-div">
@@ -240,7 +271,7 @@
                       </div>
                       <div class="hr-custom"></div>
                       <div class="price-middle-div">
-                            <p>Price:</p><p>$149.99</p><p>+$56.63 shipping</p>
+                            <p class="desktop">Price:</p><p class="big">$149.99</p><p class="desktop">+$56.63 shipping</p>
                       </div>
                       <div class="price-bottom-div">
                           <p>$101.73 Shipping & Import Fees</p>
@@ -260,7 +291,7 @@
               </div>
                 <div class="main-right-info-div">
                     <div class="right-price-div">
-                       <h3>$149.99</h3>
+                       <h3><span>&#xFE69</span>149.99</h3>
                     </div>
                     <div class="right-price-bottom">
                         <p>$101.73 Shipping & Import Fees</p>
@@ -269,7 +300,6 @@
                     <div class="arrives-div">
                         <p>Arrives: <span class="date-arrives">Wednesday, Dec 15</span> </p>
                     </div>
-
                     <div class="deliver2-div">
 <!--                        <div class="location-icon"></div>-->
                         <i class="fas fa-map-marker-alt"></i> <p>Deliver to Israel</p>
@@ -282,12 +312,14 @@
                         <input id="qty-number" type="number" min="1" max="5" value="1">
                      </div>
                      <div class="buttons-div">
-                        <button class="btn-add">
-                                Add to Cart
-                        </button>
-                        <button class="btn-buy">
-                            Buy Now
-                        </button>
+                         <div class="buttons-div-inner">
+                            <button class="btn-add">
+                                    Add to Cart
+                            </button>
+                            <button class="btn-buy">
+                                Buy Now
+                            </button>
+                         </div>
                         <div class="secure-div">
                             <i class="fas fa-lock"></i><span><a href="#">  Secure transaction</a></span>
                         </div>
@@ -302,7 +334,6 @@
                                 <label for="gift-wrap"><input id="gift-wrap" type="checkbox" name="gift-wrap" value="yes"><i class="a-icon a-icon-checkbox"></i><span class="a-label a-checkbox-label">Add a gift receipt for easy returns</span></label>
                             </div>
                         </div>
-
                         <button class="btn-add-to-list">
                             Add to List
                         </button>
@@ -338,12 +369,9 @@
                       </div>
                   </div>
               </div>
-
           </div>
-
       </section>
   </div>
-
 </main>
     <script src="./scripts/main.js" type="module"></script>
 </body>
