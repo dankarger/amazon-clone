@@ -52,8 +52,8 @@ function changeImage(image, imageElement) {
 let pages = paginator(productsDataBase,pageItems)
 
 //adjusting the html to show the current page number in thecarousel
-currentPage.innerHTML=pageNumber+1
-restOfPages.innerHTML =  pages.length
+currentPage.innerHTML=(pageNumber+1).toString()
+restOfPages.innerHTML =  (pages.length).toString()
 
 //Function that send a selected page to the injectRowCards function
 function createCarousel(pages,pageNumber) {
@@ -74,8 +74,8 @@ function pageChange(value,pages,pageNumber){
         restOfPages.innerHTML = pages.length
         return
     }
-    currentPage.innerHTML=newPageNumber+1
-    restOfPages.innerHTML = pages.length
+    currentPage.innerHTML=(newPageNumber+1).toString()
+    restOfPages.innerHTML = (pages.length).toString()
     createCarousel(pages, newPageNumber)
 }
 
@@ -87,36 +87,36 @@ function checkWidth(width){
     if(width<600&&pageItems!==1){
         pageItems= 1
         pages = paginator(productsDataBase,pageItems)
-        currentPage.innerHTML=pageNumber+1
-        restOfPages.innerHTML = pages.length
+        currentPage.innerHTML=(pageNumber+1).toString()
+        restOfPages.innerHTML = (pages.length).toString()
         return createCarousel(pages, pageNumber)
     }
     else if (width<850&&width>600&&pageItems!==2){
          pageItems= 2
          pages = paginator(productsDataBase,pageItems)
-        currentPage.innerHTML=pageNumber+1
-        restOfPages.innerHTML = pages.length
+        currentPage.innerHTML=(pageNumber+1).toString()
+        restOfPages.innerHTML = (pages.length).toString()
          return createCarousel(pages, pageNumber)
     }
     else if(width>850&&width<1100&&pageItems!==3){
         pageItems= 3
         pages = paginator(productsDataBase,pageItems)
-        currentPage.innerHTML=pageNumber+1
-        restOfPages.innerHTML = pages.length
+        currentPage.innerHTML=(pageNumber+1).toString()
+        restOfPages.innerHTML = (pages.length).toString()
         return createCarousel(pages, pageNumber)
     }
     else if(width>1100&&width<1400&&pageItems!==4){
         pageItems= 4
         pages = paginator(productsDataBase,pageItems)
-        currentPage.innerHTML=pageNumber+1
-        restOfPages.innerHTML = pages.length
+        currentPage.innerHTML=(pageNumber+1).toString()
+        restOfPages.innerHTML = (pages.length).toString()
         return  createCarousel(pages, pageNumber)
     }
     else if(width>1400 &&pageItems!==5){
         pageItems= 5
         pages = paginator(productsDataBase,pageItems)
-        currentPage.innerHTML=pageNumber+1
-        restOfPages.innerHTML = pages.length
+        currentPage.innerHTML=(pageNumber+1).toString()
+        restOfPages.innerHTML = (pages.length).toString()
         return  createCarousel(pages, pageNumber)
     }
 }
